@@ -1,0 +1,142 @@
+<!-- formulir_1.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Riwayat Hidup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            width: 600px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .photo {
+            float: right;
+            width: 3cm;
+            height: 4cm;
+            border: 1px solid #000;
+            background-size: cover;
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #555;
+            font-size: 12px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .clear {
+            clear: both;
+        }
+        .form-group button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Daftar Riwayat Hidup</h1>
+        <div class="photo">
+            <label for="photo">Unggah Foto<br>(3x4 cm)</label>
+        </div>
+        <div class="clear"></div>
+        <form action="formulir2.html" method="post">
+            <div class="section-title">I. KETERANGAN PERORANGAN</div>
+            <div class="form-group">
+                <label for="name">Nama Lengkap</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="nip">NIP</label>
+                <input type="text" id="nip" name="nip">
+            </div>
+            <div class="form-group">
+                <label for="pangkat">Pangkat/Golongan</label>
+                <input type="text" id="pangkat" name="pangkat">
+            </div>
+            <div class="form-group">
+                <label for="blood">Golongan Darah</label>
+                <input type="text" id="blood" name="blood">
+            </div>
+            <div class="form-group">
+                <label for="gender">Jenis Kelamin</label>
+                <input type="text" id="gender" name="gender">
+            </div>
+            <div class="form-group">
+                <label for="religion">Agama</label>
+                <input type="text" id="religion" name="religion">
+            </div>
+            <div class="form-group">
+                <label for="status">Status Perkawinan</label>
+                <input type="text" id="status" name="status">
+            </div>
+            <div class="form-group">
+                <label for="address">Alamat Rumah</label>
+                <input type="text" id="address" name="address" placeholder="Jalan, Kelurahan/Desa, Kecamatan, Kabupaten/Kota, Provinsi">
+            </div>
+            <div class="form-group">
+                <label for="height">Tinggi Badan (cm)</label>
+                <input type="text" id="height" name="height">
+            </div>
+            <div class="form-group">
+                <label for="weight">Berat Badan (kg)</label>
+                <input type="text" id="weight" name="weight">
+            </div>
+            <div class="form-group">
+                <label for="hobby">Kegemaran/Hobi</label>
+                <input type="text" id="hobby" name="hobby">
+            </div>
+            <div class="form-group">
+                <input type="file" id="photo" name="photo" accept="image/*">
+                </div>
+            <div class="form-group">
+                <button type="submit">Selanjutnya</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var button = document.querySelector("button[type='submit']");
+            button.addEventListener("click", function(event) {
+                event.preventDefault();
+                window.location.href = "formulir2.html"; 
+            });
+        });
+    </script>
+</body>
+</html>

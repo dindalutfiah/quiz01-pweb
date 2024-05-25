@@ -1,0 +1,95 @@
+<!-- formulir_4.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Riwayat Hidup - Riwayat Pekerjaan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            width: 600px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Daftar Riwayat Hidup</h1>
+        <div class="section-title">IV. RIWAYAT PEKERJAAN</div>
+        <form action="formulir5.html" method="post">
+            <!-- Tambahkan formulir untuk riwayat pekerjaan di sini -->
+            <div class="form-group">
+                <label for="pangkat">Pangkat</label>
+                <input type="text" id="pangkat" name="pangkat" placeholder="Pangkat">
+                </div>
+                <div class="form-group">
+                    <label for="golongan">Golongan</label>
+                    <input type="text" id="golongan" name="golongan" placeholder="Golongan">
+                </div>
+                <div class="form-group">
+                    <label for="tmt">Berlaku TMT</label>
+                    <input type="date" id="tmt" name="tmt">
+                </div>
+                <div class="form-group">
+                    <label for="gaji">Gaji Pokok</label>
+                    <input type="text" id="gaji" name="gaji" placeholder="Gaji Pokok">
+                </div>
+                <div class="form-group">
+                    <label for="dasar">Peraturan yang Dijadikan Dasar</label>
+                    <input type="text" id="dasar" name="dasar" placeholder="Peraturan yang Dijadikan Dasar">
+                </div>
+                <div class="form-group">
+                    <button type="submit">Selanjutnya</button>
+                </div>
+            </form>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var button = document.querySelector("button[type='submit']");
+                button.addEventListener("click", function(event) {
+                    event.preventDefault(); 
+                    window.location.href = "formulir5.html"; 
+                });
+            });
+        </script>
+    </body>
+    </html>
+    

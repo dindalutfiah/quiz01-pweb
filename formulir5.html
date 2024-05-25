@@ -1,0 +1,94 @@
+<!-- formulir_5.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Riwayat Hidup - Pengalaman Pekerjaan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            width: 600px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Daftar Riwayat Hidup</h1>
+        <div class="section-title">V. PENGALAMAN PEKERJAAN</div>
+        <form action="hasil_riwayat_hidup.html" method="post">
+            <!-- Tambahkan formulir untuk pengalaman pekerjaan di sini -->
+            <div class="form-group">
+                <label for="jabatan">Jabatan/Pekerjaan</label>
+                <input type="text" id="jabatan" name="jabatan" placeholder="Jabatan/Pekerjaan">
+            </div>
+            <div class="form-group">
+                <label for="mulai">Mulai</label>
+                <input type="date" id="mulai" name="mulai">
+            </div>
+            <div class="form-group">
+                <label for="sampai">Sampai</label>
+                <input type="date" id="sampai" name="sampai">
+            </div>
+            <div class="form-group">
+                <label for="gaji">Golongan Ruang Gaji</label>
+                <input type="text" id="gaji" name="gaji" placeholder="Golongan Ruang Gaji">
+            </div>
+            <div class="form-group">
+                <label for="pokok">Gaji Pokok</label>
+                <input type="text" id="pokok" name="pokok" placeholder="Gaji Pokok">
+            </div>
+            <div class="form-group">
+                <button type="submit">Kirim</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var button = document.querySelector("button[type='submit']");
+            button.addEventListener("click", function(event) {
+                event.preventDefault(); 
+                window.location.href = "hasil_riwayat_hidup.html"; 
+            });
+        });
+    </script>
+</body>
+</html>
